@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판v0.0.2</title>
+    
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./editModal.css">
+    <link rel="stylesheet" href="./viewModal.css">
+
+    <script src="./main.js" defer></script>
+    <script src="./editModal.js" defer></script>
+    <script src="./viewModal.js" defer></script>
+</head>
+
+<body>
+    <div class="header-bar">
+        <h1>환영합니다.</h1>
+        <button id="logoutBtn">로그아웃</button>
+    </div>
+    <hr>
+
+    <button id="writeBtn">글쓰기</button>
+
+    <table class="board">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>Views</th>
+            </tr>
+        </thead>
+        <tbody id="boardList">
+            <!-- 게시글 목록이 여기에 동적으로 추가됩니다. -->
+        </tbody>
+    </table>
+
+    <div class="editModal">
+        <div class="editModal-body">
+            <button class="editModalClose" onclick="onCloseEditModal();">x</button>
+            <h2>글쓰기</h2>
+            <form id="writeForm" onsubmit="return false;">
+                <label id="writer">작성자: </label>
+                <br>
+                <label for="title">제목:</label>
+                <input type="text" id="title" name="title">
+                <br>
+                <label for="content">내용:</label>
+                <textarea id="content" name="content" rows="14" cols="62"></textarea>
+                <br>
+                <button type="button" id="saveBtn">저장</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- 글 확인 모달 -->
+    <div class="viewModal">
+        <div class="viewModal-body">
+            <button class="viewModalClose" onclick="onCloseViewModal();">x</button>
+            <h2 id="viewTitle">1</h2>
+            <div class="view-meta">
+                <span id="viewWriter">faker</span> |
+                <span id="viewDate">2025-06-01</span> |
+                조회수: <span id="viewCount">1,111</span>
+            </div>
+            <div id="viewContent">1231231321</div>
+            <div class="viewModalBtns">
+                <button type="button" id="editBtn">수정</button>
+                <button type="button" id="deleteBtn">삭제</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

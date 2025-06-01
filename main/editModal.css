@@ -1,0 +1,69 @@
+.editModal {
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.16);
+    justify-content: center;
+    align-items: center;
+}
+
+.editModal-body {
+    background: darkgray;
+    padding: 40px 5vw 32px 5vw;
+    border-radius: 14px;
+    width: 90vw;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 4px rgba(0, 0, 0, 0.10);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.editModalClose {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #888;
+    cursor: pointer;
+    /* transition: color 0.2s; */
+}
+
+.editModalClose:hover {
+    color: #333;
+}
+
+.editModal-body input[type="text"],
+.editModal-body textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 14px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: slategray;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+
+.editModal-body input[type="text"]:focus,
+.editModal-body textarea:focus {
+    border-color: dimgray;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+}

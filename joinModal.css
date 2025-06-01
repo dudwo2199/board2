@@ -1,0 +1,83 @@
+.joinModal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body{
+    background: dimgray;
+    padding: 36px 28px 28px 28px;
+    border-radius: 14px;
+    min-width: 320px;
+    width: 90vw;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13), 0 1.5px 4px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.joinFieldset{
+    padding: 0;
+    margin: 0;
+}
+
+.modal-body input{
+    width: 92%;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: slategray;
+    transition: border 0.2s;
+}
+.modal-body input:focus {
+    border: 1.5px solid dimgray;
+    outline: none;
+    background: lightslategray;
+}
+
+.modal-body button[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    background: #444;
+    color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: darkgray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-body button[type="submit"]:hover {
+    background: #555;
+}
