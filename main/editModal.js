@@ -37,6 +37,7 @@ document.querySelector("#saveBtn").addEventListener("click", () => {
         item.content = content;
         alert("글이 수정되었습니다.");
     } else {
+        SEQ_BOARD = localStorage.getItem("SEQ_BOARD") || 1;
         // 작성 모드
         const newItem = {
             No: list.length + 1,
@@ -47,6 +48,7 @@ document.querySelector("#saveBtn").addEventListener("click", () => {
             content: content,
             serialNo: userSerialNo,
         };
+        localStorage.setItem("SEQ_BOARD", SEQ_BOARD);
         list.push(newItem);
         alert("글이 작성되었습니다.");
     }
