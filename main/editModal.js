@@ -40,7 +40,7 @@ document.querySelector("#saveBtn").addEventListener("click", () => {
         SEQ_BOARD = localStorage.getItem("SEQ_BOARD") || 1;
         // 작성 모드
         const newItem = {
-            No: list.length + 1,
+            No: SEQ_BOARD++,
             title: title,
             writer: userNick,
             date: new Date().toDateString(),
